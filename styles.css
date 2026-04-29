@@ -1,0 +1,1663 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* ------------------------------------------------------------------------ */
+/* HOME PAGE AND GLOBAL CSS SETTINGS */
+/* ------------------------------------------------------------------------ */
+*{
+    box-sizing: border-box;
+}
+
+
+#container{
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.sr-only{
+    display: none;
+}
+
+#logo{
+    width: 15em;
+    height: auto;
+    padding-left: 20px;
+    display: block;
+}
+
+header{
+    max-width: 1280px;
+    margin: 0 auto;
+
+}
+
+/*---------------------------------------------------------------------------------------------------------------*/
+/* DESKTOP STYLES */
+/*---------------------------------------------------------------------------------------------------------------*/
+/* HEADER NAVIGATION USING FLEXBOX */
+
+#header_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row; /* horizontal */
+
+    padding: 20px; 
+    margin-bottom: -70px; 
+    width: 100%;
+}
+
+nav > ul{
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+nav > li{
+    display: inline;    
+}
+
+a{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 20px; /* Makes font size bigger in nav*/
+    text-decoration: none;
+    color: black;
+    padding: 20px; 
+    line-height: 1;
+    
+}
+
+li{
+    list-style: none;
+}
+
+li > a:hover{
+    text-decoration: underline;
+    color: #9E3A2E;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+#hamburger{
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+#hamburger span{
+    width: 25px;
+    height: 3px;
+    background: black;
+    display: block;
+    transition: 0.3s;
+}
+
+
+
+
+/*---------------------------------------------------------------------------------------------------------------*/
+/* SLIDESHOW/CAROUSEL STYLES */
+
+#carousel_container{
+    font-family: "Amatic SC", sans-serif; 
+    font-weight: 400;
+    width: 100%; 
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 25px;
+    padding-bottom: 2rem;
+}
+
+/* Carousel Container, Menu button and slide text*/
+
+#carousel_container{
+    margin-bottom: 3em;
+}
+
+.carousel{
+    width: 100%;
+    height: 600px;
+}
+
+.slide{
+    position: relative;
+    margin-top: 35px;
+
+}
+
+.slide::before{ /* dark overlay of image to make text easier to read */
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.35);
+}
+
+.slide > img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+.slide_contents{
+    position: absolute; /* centers contents on the carousel */
+    top: 60%; /* centers text and button */
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    text-align: center;
+    color: white;
+    transition: 0.3s;
+}
+
+.slide_contents > h2{
+    font-size: 65px;
+    letter-spacing: 10px;
+    margin-bottom: 30px;
+    padding-bottom: 2em;
+    color: whitesmoke;
+}
+
+.menu_button{
+    display: inline-block;
+    padding: 15px 28px;
+    background-color: #C89B3C; 
+    color: white; 
+    text-decoration: none;
+    border-radius: 4px; 
+    transition: 0.3s; /* smooth transition for hover style */
+}
+
+.menu_button:hover{
+    background-color: #9E3A2E;
+}
+
+.resize{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+/*---------------------------------------------------------------------------------------------------------------*/
+/* ABOUT US HOME PAGE SECTION SECTION */
+
+#about > h2{
+    font-family: "Amatic SC", sans-serif;
+    background-color: #A4D7E2;
+    font-weight: 700;
+    font-size: 75px;
+    color: #9E3A2E;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 4px;
+    padding-left: 15rem; 
+}
+
+.about_container{
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 5rem 0;
+
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+.about_container > img{
+    width: 600px;
+    border-radius: 4px;
+    box-shadow: 0px 15px 40px rgba(0,0,0,0.15);
+}
+
+.about_text > p{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 2;
+    padding-bottom: 20px;
+    
+}
+
+.story_button{
+    background-color: #C89B3C; /* gold accent */
+    border-radius: 4px;
+    transition: 0.3s; /* smooth transition for hover style */
+}
+
+.story_button:hover{
+    text-decoration: none;
+    background-color: #9E3A2E;
+    color: white;
+}
+
+
+
+
+/*---------------------------------------------------------------------------------------------------------------*/
+/*FAVORITES SECTION + TRADITIONS SECTION */
+#favorites, #jqtabs, #jqtabs2{
+    font-family: "Amatic SC", sans-serif;
+    font-size: 30px;
+
+    background: transparent; /* removes jquery default border settings */
+    border: none;
+}
+
+#favorites > h2, #jqtabs2 > h2{
+    font-family: "Amatic SC", sans-serif;
+    background-color: #A4D7E2;
+    font-weight: 700;
+    font-size: 75px;
+    color: #9E3A2E;
+    padding-top: 10px;
+    padding-left: 30rem;
+}
+
+#jqtabs2 p{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.gridLayout{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+} /* also for traditions section*/
+
+.grid_img_info{
+    text-align: center;
+    background: #f8f8f8;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}/* also for traditions section*/
+
+.grid_img_info > img{
+    width: 100%;
+    height: 60%;
+    border-radius: 6px;
+}/* also for traditions section*/
+
+#jqtabs .ui-widget-header, #jqtabs2 .ui-widget-header{ 
+    background: transparent; /* removes jquery default gray bar in header */
+    border: none;
+}
+
+#jqtabs .ui-tabs-panel, #jqtabs2 .ui-tabs-panel{
+    border: none;
+    background: transparent;
+}
+
+#jqtabs ul, #jqtabs2 ul{
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding-bottom: 10px;
+    border: none;   
+}
+
+#jqtabs li, #jqtabs2 li{
+    list-style: none;
+    border: none;   
+}
+
+#jqtabs li a, #jqtabs2 li a{ 
+    display: inline-block; /* Style jquery tabs into buttons */
+    background-color: #C89B3C;
+    color: black;
+    text-decoration: none;
+    border-radius: 6px;
+    letter-spacing: 1.5px;
+    font-weight: 400;
+    transition: all .3s ease;
+}
+
+#jqtabs li a:hover, #jqtabs2 li a:hover{
+    background-color: #9E3A2E;
+    color: white;
+}
+
+#jqtabs p{
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    color: #322f30;
+}
+.full_menu_button li{
+    margin-left: 18em;
+}
+
+.full_menu_button li a{
+    
+    padding: 15px 25px;
+    background-color: #C89B3C;
+    color: black;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 400; 
+}
+
+.full_menu_button li a:hover{
+    background-color: #9E3A2E;
+    color: white;;
+}
+
+#traditions > h2{
+    font-family: "Amatic SC", sans-serif;
+    background-color: #A4D7E2;
+    font-weight: 700;
+    font-size: 75px;
+    color: #9E3A2E;
+    padding-top: 10px;
+    padding-left: 24rem;
+    border-radius: 4px;
+}
+
+.traditions_grid_layout{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;  
+    padding-top: 30px;
+}
+
+
+
+
+
+
+/*---------------------------------------------------------------------------------------------------------------*/
+/* WHAT OUR GUESTS SAY */
+#reviews_maps > h2{
+    font-family: "Amatic SC", sans-serif;
+    background-color: #A4D7E2;
+    font-weight: 700;
+    font-size: 75px;
+    color: #9E3A2E;
+    padding-top: 10px;
+    padding-left: 27rem;
+}
+
+/* sections of both maps and reviews */
+
+#reviews_maps_container{
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+
+    
+}
+
+#reviews_section, #map_section{
+    flex: 1;  
+}
+
+
+#reviews_section > h3{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    color: #322f30;
+    margin-bottom: 2rem;
+    padding-left: 12rem;
+}
+
+#map_section > h3{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    color: #322f30;
+    margin-bottom: 5rem;
+    padding-left: 15rem;
+
+}
+
+#map{ /* makes google map visible*/
+    width: 100%; /* makes google map visible*/
+    height: 400px;
+}
+
+
+/* reviews styling */
+
+#reviews_list{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.review{ /* CSS for js addition to html*/
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-size: 1.1em;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    background: #fafafa;
+}
+
+.review > strong{ /* CSS for js addition to html*/
+    font-family: "Amatic SC", sans-serif;
+    font-weight: bold;
+    font-size: 1.8em;
+}
+
+.stars{ /* CSS for js addition to html*/
+  color: gold;
+  margin-left: 5px;
+}
+
+.review > small{ /* CSS for js addition to html*/
+  color: #666;
+}
+
+/* get directions button and text styling*/
+#reviews_maps > p{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: #322f30;
+    margin-left: 42rem;
+    margin-top: -25px;
+    text-align: center;
+}
+
+.directions_button{
+    font-family: "Montserrat", sans-serif;
+    display: inline-block;
+    margin-top: 10px;   
+    margin-bottom: 2rem;
+    padding: 15px 30px;
+    background-color: #C89B3C;
+    color: black;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    
+}
+
+.directions_button:hover{
+    background-color: #9E3A2E;
+    color: white
+}
+
+#directions_text_button{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 1.1em;
+    margin-top: 90px;
+    margin-left: 20px;
+    text-align: center;
+}
+
+
+
+
+
+
+/*---------------------------------------------------------------------------------------------------------------*/
+/* STAY CONNECTED*/
+#connected{
+    background-color: #A4D7E2;
+} 
+    
+
+#connected > h2{
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 700;
+    font-size: 75px;
+    color: #9E3A2E;
+    margin-left: 30rem;
+    padding-top: 10px;
+    border-radius: 4px;
+}
+
+#connected > p{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #322f30;
+    margin-left: 1rem;
+    margin-top: -25px;
+    text-align: center;
+}
+
+#social_media_links{
+    display: flex;   
+    justify-content: space-evenly;
+    margin-top: 2rem;
+}
+
+#social_media_links > a > img{
+    width: 80px;
+    height: 80px;
+    transition: transform 0.3s ease;
+}
+
+
+
+
+
+
+/*---------------------------------------------------------------------------------------------------------------*/
+/* FOOTER STYLES */
+
+footer{
+    border-top: 2px solid #C89B3C;
+}
+
+#footer_container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    padding: 40px;
+    background-color: black; 
+    color: white; 
+    flex-wrap: wrap; /* makes it responsive */
+}
+
+.footer_section{
+    flex: 1;
+    
+}
+
+/* LEFT SIDE FOOTER NAVIGATION */
+.footer_nav ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer_nav li{
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.footer_nav a{
+    text-decoration: none;
+    font-size: 17px;
+    padding: 10px;
+    color: white;
+}
+
+.footer_nav a:hover{
+    color: #C89B3C;
+    padding: 10px;
+
+}
+
+/* RIGHT SIDE CONTACT */
+.contact_us_footer{
+    text-align: right;
+    color:#C89B3C;
+}
+
+
+.footer_bottom_text{   
+    padding-top: 30px;
+    padding-right: 200px;
+    margin-right: 200px;
+    margin-left: 400px;
+    text-align: center;
+    color: white;   
+}
+
+.footer_icons{
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+
+
+
+
+/*---------------------------------------------------------------------------------------------------------------*/
+/* MENU PAGE STYLES */
+
+/* Uber, DoorDash, GrubHub image link sections */
+.order_text{
+    font-family: "Amatic SC", sans-serif;
+    background-color: #A4D7E2;
+    font-weight: 700;
+    font-size: 75px;
+    color: #9E3A2E;
+    padding-top: 10px;
+
+    border-radius: 4px;
+    text-align: center;
+}
+
+.order_options, .order_options_bottom{
+    display: flex;
+    justify-content: space-around;
+}
+
+#order_links_bottom > p, #order_links_top > p{
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+#order_links_bottom > h3{
+    text-align: center;
+}
+
+.order_options > a > img{
+    width: 70px;
+    height: 70px;
+    justify-content: space-around;
+}
+
+
+
+
+
+/*---------------------------------------------------------------------------------------------------------------*/
+/* MENU CARD STYLES */
+
+.menu_card{
+  border-radius: 12px;
+  padding: 15px;
+  background: #fff;
+  transition: transform 0.2s ease;
+  transition: box-shadow 0.2s ease;
+}
+
+/* Product title */
+.menu_card h4{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    margin: 0;
+    font-size: 1.2em;
+}
+
+/* Image styles */
+.menu_card img{
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+/* Product description text */
+.menu_card p{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    color: #555;
+}
+
+/* Hover effect for each menu card */
+.menu_card:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.bold{
+    font-weight: bold;
+}
+
+#tab_starters, #tab_mains, #tab_kids, #tab_drinks, #tab_sides, #tab_sauces{ /* display grid for right side menu cards structure */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+
+/* Flex and styles for menu_tab_div to create vertical stack menu on left hand side*/
+#menu_tabs{
+    border: none;
+}
+
+#menu_tab_div{
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start; /* allows sticky menu on scroll */   
+}
+
+#menu_tab_div > ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 200px;
+
+    position: sticky; /* for sticky menu */
+    top: 100px;
+
+
+}
+
+#menu_tab_div > ul > li{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menu_tab_div > ul > li > a{ /*Font type and color */
+    display: inline-block;
+    padding: 12px 16px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    text-align: center;
+    background-color: white;
+    color: black;
+    width: 100%;
+    border: none;
+    text-decoration: none;
+}
+
+#menu_tab_div .ui-tabs-active a{ /* text/background color for menu tabs on page load/selected */
+    background-color: #C89B3C ;
+    color: #9E3A2E ;
+}
+
+#menu_tab_div li a:hover, #menu_tab_div li a:hover{ /* hover style color for vertical menu tabs*/
+    background-color: #9E3A2E;
+    color: white;
+    width: 100%;
+}
+
+
+
+/*---------------------------------------------------------------------------------------------------------------*/
+/* OUR STORY PAGE STYLES */
+#top_about{
+    display: flex;
+    margin-top: 55px;  
+}
+
+#top_about h1{
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 900;
+    font-size: 4rem;
+    letter-spacing: 1.1pc;
+    margin-top: 135px;   
+}
+
+.top_contents{
+    margin-top: -100px;
+    margin-left: 70px;   
+}
+
+.top_img > img{
+    border-radius: 7px;
+}
+.top_img > p{
+    font-family: "Amatic SC", sans-serif;
+    font-size: 30px;   
+    text-align: center;
+}
+
+.top_contents > h1{
+    background-color: #C89B3C;
+    color: white;
+    border-radius: 7px;
+    padding: 10px 15px 10px 15px;
+}
+
+.top_contents > p{
+    font-family:"Montserrat", sans-serif; 
+    font-size: 25px;
+    padding: 15px 15px;
+    background-color: #9E3A2E;
+    border-radius: 7px;
+    color: white;
+}
+
+.about_hook{
+    font-family: "Amatic SC", sans-serif;
+    font-size: 60px;
+    margin-top: 10px;
+    text-align: center;
+    background-color: #A4D7E2;
+    color: black;
+    padding: 10px 10px 10px 10px;
+}
+
+/* roots, food, community - our story,  */
+#roots_section, #food_section, #community_section{
+    display: flex;
+    align-items: center;
+    gap: 2rem; 
+    margin-bottom: 50px;
+}
+
+.story_text{
+    flex: 1;
+}
+
+.story_text, #community_img{
+    flex: 0 0 50%; /* 50% split of text and story items */
+    border-radius: 5px;
+}
+
+.story_text > h2{
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 900;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.story{
+    font-family:"Montserrat", sans-serif; 
+    font-size:25px;
+    width: 100%;
+    padding: 20px;
+    background-color: #C89B3C;
+    border-radius: 7px;
+    color: black;
+    text-align: center;
+}
+
+.story > p{
+    font-size:20px;
+    line-height: 1.5;
+}
+
+.story > h2{
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 900;
+    font-size: 4rem;
+    text-align: center;
+    color:black;
+    border-radius: 7px;
+}
+
+.story_text > p{
+    font-family: "Amatic SC", sans-serif;
+    font-size: 30px;
+    width: 100%;
+    padding: 20px;
+    background-color: #9E3A2E;
+    border-radius: 7px;
+    color: white;
+    text-align: center;
+}
+
+
+
+.roots_img, .community_img{
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+
+}
+
+.food_img{
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+}
+
+/* video section */
+#video_section > h2{
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 900;
+    font-size: 4rem;
+    text-align: center;
+    background-color: #A4D7E2;
+    color: black;
+    padding: 10px 10px 10px 10px;
+}
+
+#ig_embedded_vids{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.video{
+    width: 100%;
+    
+}
+
+.video > video{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+
+
+/*---------------------------------------------------------------------------------------------------------------*/
+/* GALLERY PAGE STYLES */
+
+#gallery_header{
+    text-align: center;
+    padding-top: 25px;
+}
+
+#gallery_header h1{
+    font-family: "Amatic SC", sans-serif;
+    font-size: 40px;
+}
+
+#gallery_header p{
+    font-family:"Montserrat", sans-serif;
+    font-size: 20px;
+}
+
+.photorows{
+    background-color: #C89B3C;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 5px;
+    padding-bottom: 20px;
+}
+
+.photocolumns{
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 5px;
+}
+
+.photocolumns img{
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+
+
+
+
+/*---------------------------------------------------------------------------------------------------------------*/
+/* CONTACT PAGE STYLES */
+
+#formh2{
+    font-family: "Amatic SC", sans-serif;
+    font-size: 40px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+#form_p{
+    font-family:"Montserrat", sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+.thank_you{
+    font-family:"Montserrat", sans-serif;
+    font-size: 20px;
+    margin-top: 10px;
+    padding-right: 650px;
+    padding-bottom: 50px;
+    text-align: center;   
+}
+
+#form_flex{ 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    padding-bottom: 20px;
+}
+
+#form{
+  border: 1px solid #EEE;
+  border-radius: 5px;
+  box-shadow: -5px 5px 10px rgba(0,0,0,.07);
+  color: black;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  margin: 1rem auto;
+  padding: 1rem;
+}
+
+#form, #form_img {
+    flex: 1;
+}
+
+#form_img > img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px; 
+}
+
+fieldset, input, label, textarea{
+    box-sizing: border-box;
+	display: block;
+    font-family:"Montserrat", sans-serif;
+    font-size: 15px;
+	width: 100%;
+}
+
+label{
+  font-weight: 600;
+  margin-bottom: 0.1rem;
+}
+
+input[type="email"],
+input[type="tel"],
+input[type="text"]{
+    border: 1px solid #333;
+	border-radius: 5px;
+	font-size: 1rem;
+	padding: 0.5rem;
+}
+
+fieldset {
+    align-items: center;
+    border: 1px solid #333;
+	border-radius: 5px;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr 3fr;
+    padding: 0.25rem 1rem 1rem;
+}
+
+fieldset > legend{
+  font-weight: 600;
+}
+
+fieldset > label{
+  margin: 0;
+  font-weight: 400;
+}
+
+textarea{
+  border: 1px solid #333;
+  border-radius: 5px;
+  font-size: 1rem;
+  height: 5rem;
+  padding: 0.5rem;
+}
+
+input[type=submit]{
+  width: 100%;
+  background-color: #9E3A2E;
+  color: white;
+  padding: 14px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover{
+    background-color: #C89B3C;
+    color: white;
+}
+
+.required {
+  color: #DE0B63;
+  font-size: 1.5em;
+  margin-left: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------------------------------------------------------------------------------------------------*/
+/* MEDIA QUERIES FOR MOBILE STYLES */
+
+@media (max-width: 768px){
+/* HOME PAGE STYLES */
+    #header_container{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 0;
+    }
+
+    nav > ul{
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        font-size: 20px;
+    }
+
+    a{
+        font-size: 16px;
+        padding: 10px;
+    }
+
+/* Hamburger Menu styles */
+    #hamburger{
+        display: flex;
+    }
+
+
+    #main_nav{
+        display: none;
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: white;
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+
+        position: relative;
+        top: 100%;   /* mobile nav below hamburger */
+        left: 0;
+    }
+
+    #main_nav.active{
+        display: flex;
+    }
+
+    #main_nav > ul{
+        flex-direction: column;
+    }
+
+    
+    #main_nav.active{
+        display: flex;
+    }
+
+/* carousel styles */
+    .carousel,
+    .slide > img{
+        height: 300px; 
+    }
+
+    .slide_contents > h2{
+        font-size: 32px;
+        letter-spacing: 3px;
+        padding-bottom: 0;
+    }
+
+    .menu_button{
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+/* About intro styles */
+    .about_container{
+        flex-direction: column;
+        padding: 2rem 1rem;
+    }
+
+    .about_container > img{
+        width: 100%;
+    }
+
+    #about > h2{
+        font-size: 40px;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .about_text > p{
+        font-size: 16px;
+    }
+
+/* Favorites styles */
+
+  
+    #jqtabs ul{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 0;
+        margin: 0;
+    }
+
+    #jqtabs ul li{
+        list-style: none;
+        width: 100%;
+    }
+
+    #jqtabs ul li a{
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+    }
+
+    #jqtabs2 ul{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 0;
+        margin: 0;
+    }
+
+    #jqtabs2 ul li{
+        list-style: none;
+        width: 100%;
+    }
+
+    #jqtabs2 ul li a{
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+    }
+
+    .gridLayout,
+    .traditions_grid_layout{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        width: 100%;
+        max-width: 100%;  
+    }
+
+    #favorites > h2,
+    #traditions > h2,
+    #reviews_maps > h2,
+    #connected > h2{
+        font-size: 40px;
+        padding-left: 0;
+        text-align: center;
+    }
+
+   .full_menu_button{
+        margin-left: -14.3em;
+
+    }
+    
+
+   
+
+
+
+
+/* Map + Review styles */
+    #reviews_maps_container{
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        gap: 2rem;
+        width: 100%;
+    }
+
+    #map_section{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #map{
+        width: 100%;
+        max-width: 100%;
+        height: 300px;
+    }
+
+    #map > iframe{
+        width: 100%;
+        display: block;
+    }
+
+    #reviews_section > h3,
+    #map_section > h3{
+        text-align: center;
+        padding-left: 0;
+    }
+
+    #directions_text_button{
+        margin: 20px auto 0;
+    }
+
+
+
+/* Stay Connected styles */
+    #connected > h2{
+        margin-left: 0;
+        text-align: center;
+        font-size: 40px;
+    }
+
+    #social_media_links{
+        flex-direction: row;
+        gap: 15px;
+        justify-content: center;
+    }
+
+    #social_media_links img{
+        width: 50px;
+        height: 50px;
+    }
+
+
+/* Footer styles */
+    #footer_container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 2rem;
+        width: 100%;
+    }
+
+    #footer_container > *{
+        width: 100%;
+        text-align: center;
+    }
+
+    .contact_us_footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer_bottom_text{
+        margin: 0;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+/* ---------------------------------------------------------------------------------------------------------------------- */
+/* MENU PAGE STYLES */
+ 
+/* menu tabs div for centering cards + nav */
+    #menu_tab_div{
+        display: flex;
+        flex-direction: column; 
+        width: 100%;
+        align-items: center;
+        
+
+        
+    }
+
+/* menu tabs nav styles */
+    .menu_tabs{
+        display: flex;
+        flex-direction: row;
+
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+
+        background: #fff;
+        border-bottom: 1px solid #eee;
+
+        position: static !important; /* keeps menu nav at the top on scroll */
+        
+    }
+
+    .menu_tabs > li{
+        flex: 0 0 auto;
+        list-style: none;
+        
+    }
+
+    .menu_tabs li a{
+        display: block;
+        padding: 8px 14px;
+
+        background: #f2f2f2;
+        white-space: nowrap;       
+    }
+
+
+    #menu_tab_div > div{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .menu_card{
+        width: 100%;
+        margin: 0;
+        padding: 15px;
+        border-bottom: 1px solid #eee;
+    }
+
+    .menu_card > img{
+        width: 100%;
+        display: block;
+    }
+
+
+
+/* ---------------------------------------------------------------------------------------------------------------------- */
+/* ABOUT PAGE STYLES */
+
+    /* Top section  */
+    #top_about{
+        flex-direction: column;
+        margin-top: 20px;
+        padding: 0 15px;
+        gap: 1.5rem;
+    }
+
+    #top_about > h1{
+        font-size: 2.5rem;
+        letter-spacing: normal;
+        margin-top: 0;
+        text-align: center;
+    }
+
+    .top_contents{
+        margin: 0;
+        margin-top: -150px;
+    }
+
+    .top_contents > p{
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    .top_img > p{
+        font-size: 20px;
+        padding-top: 10px;
+    }
+
+    /* Hook text */
+    .about_hook{
+        font-size: 28px;
+        padding: 10px;
+    }
+
+    /* Story sections */
+    #roots_section,
+    #food_section,
+    #community_section{
+        flex-direction: column;
+        padding: 0 15px;
+        text-align: center;
+    }
+
+    .story_text,
+    #community_img{
+        flex: 1 1 100%;
+    }
+
+    .story_text > h2,
+    .story > h2{
+        font-size: 2.2rem;
+    }
+
+    .story{
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    .story > p{
+        font-size: 15px;
+    }
+
+    .story_text > p{
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    /* Images for stories */
+    .img_about_top{
+        width:100%;
+    }
+
+    .roots_img,
+    .food_img,
+    .community_img{
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+    }
+
+    /* Videos section */
+    #video_section > h2{
+        font-size: 2.2rem;
+        padding: 10px;
+    }
+
+    #ig_embedded_vids{
+        grid-template-columns: 1fr; /* stacks the videos via grid */
+        padding: 0 15px;
+    }
+
+/* ---------------------------------------------------------------------------------------------------------------------- */
+/* GALLERY PAGE STYLES */
+
+    /* Header */
+    #gallery_header{
+        padding: 20px 15px;
+    }
+
+    #gallery_header > h1{
+        font-size: 28px;
+    }
+
+    #gallery_header > p{
+        font-size: 16px;
+    }
+
+    /* Grid Layout styles */
+    .photorows{
+        padding: 0 10px 20px;
+    }
+    /* 2 row column for photos */
+    .photocolumns{
+        flex: 50%; 
+        max-width: 50%;
+        padding: 0 5px;
+    }
+
+    .photocolumns > img{
+        margin-top: 12px;
+        border-radius: 8px;
+    }
+
+/* ---------------------------------------------------------------------------------------------------------------------- */
+/* CONTACT PAGE STYLES */
+    /* Heading and Thank you text */
+    #formh2{
+        font-size: 28px;
+        padding: 20px 10px 0;
+    }
+
+    #form_p{
+        font-size: 16px;
+        padding: 0 15px;
+    }
+
+    .thank_you{
+        font-size: 16px;
+        padding: 10px 15px 30px;
+        margin-top: 10px;
+    }
+
+    /* Form and Image stacking */
+    #form_flex{
+        flex-direction: column;
+        gap: 2rem;
+        padding: 0 15px 20px;
+    }
+
+    #form,
+    #form_img{
+        width: 100%;
+    }
+
+    /* Form */
+    #form{
+        margin: 0;
+        padding: 15px;
+    }
+
+    /* Feildset */
+    fieldset{
+        grid-template-columns: 1fr; /* stacks everything via grid columns */
+        gap: 10px;
+        padding: 10px;
+    }
+
+    fieldset > label{
+        margin-top: 5px;
+    }
+
+    /* Input and Text area */
+    input,
+    textarea{
+        font-size: 16px; /* prevents zoom on mobile */
+    }
+
+    textarea{
+        height: 100px;
+    }
+
+    /* Image */
+    #form_img > img{
+        margin-top: 10px;
+    }
+
+
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="libraries/slick.css">
+    <link rel="stylesheet" href="libraries/slick-theme.css">
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMP2JFmYNdYXYX_BB07C4vyssi1ostSFE&libraries=places&callback=initMap&loading=async" 
+  defer></script>
+
+    <script src="libraries/jquery.min.js" defer></script>
+    <link rel="stylesheet" href="libraries/jquery-ui.min.css">
+    <script src="libraries/jquery-ui.min.js" defer></script>
+
+    <script src="libraries/slick.min.js" defer></script>
+    <script src="script.js" defer></script>
+
+    
+    <title>Golden Monkey Cafe</title>
+</head>
+<body id="container">
+    <header id="header_container">
+        <div >
+            <a href="index.html"><img id="logo" src="/images/GMC_LOGO_TEXT_FINAL.png" alt="Golden Monkey Cafe Logo"></a>
+            <h1 class="sr-only">Golden Monkey Cafe</h1>
+        </div>
+               
+        <div>
+            <!-- HAMBURGER BUTTON -->
+            <div id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav id="main_nav">
+                <ul>
+                    <li><a href="menu.html#menu_tabs">MENU</a></li>
+                    <li><a href="menu.html">ORDER NOW</a></li>
+                    <li><a href="about.html">OUR STORY</a></li>
+                    <li><a href="gallery.html">GALLERY</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>        
+    </header>
+    <main>
+        <h2 id="formh2">Contact Us</h2>
+        <p id="form_p">We'd love to hear from you! Whether you have questions about our menu or want to provide feedback, feel free to reach out to us using the form below</p>
+
+        <section id="form_flex">
+            <div id="form">
+                <form> 
+            <p>
+                <label for="name">Full Name<span class="required">*</span></label>
+                <input type="text" id="name" required>
+            </p>
+        
+            <p>
+                <label for="email">Email<span class="required">*</span></label>
+                <input type="text" id="email" required>
+            </p>
+        
+            <p>
+                <label for="tel">Phone<span class="required">*</span></label>
+                <input type="tel" id="tel" required>
+            </p>
+        
+            <fieldset>
+                <legend>Preferred Method of Contact<span class="required">*</span></legend>
+            
+                <input type="radio" name="input">
+                <label for="tel">Phone</label>
+                    
+                <input type="radio" name="input">
+                <label for="email">Email</label>	
+            </fieldset>
+        
+            <p>
+                    <label for="message">Message<span class="required">*</span></label>
+                    <textarea id="message" name="message"></textarea>
+            </p>
+        
+            <p>
+                <input type="submit" id="submit">	
+            </p> 
+                </form>
+            </div>
+            
+            <div id="form_img">               
+                <img src="./images/GMC_BUSINESS_SIGN.jpg" alt="The golden monkey cafe sign at night">                
+            </div>           
+        </section>
+        <p class="thank_you">Thank you!</p>
+    
+    </main>
+    <footer>
+        <div id="footer_container">
+            <div class="footer_section">
+                <div class="footer_nav">
+                    <ul class="footer_ul">
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="menu.html">MENU</a></li>
+                        <li><a href="menu.html">ORDER</a></li>
+                        <li><a href="about.html">OUR STORY</a></li>
+                        <li><a href="contact.html">CONTACT US</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer_section">
+                <div class="footer_nav">
+                    <ul class="footer_ul">
+                        <li><img src="./images/social.png" class="footer_icons" alt="Instagram Icon"><a href="https://www.instagram.com/the_golden_monkey_cafe/" target="_blank">INSTAGRAM</a></li>
+                        <li><img src="./images/facebook.png" class="footer_icons" alt="Facebook Icon"><a href="https://www.facebook.com/chendaskhmercooking/" target="_blank">FACEBOOK</a></li>
+                        <li><img src="./images/uber.png" class="footer_icons" alt="Uber Icon"><a href="https://www.ubereats.com/store/the-golden-monkey-cafe/oUnc1XldU629AmS9Zw6CRw?srsltid=AfmBOop73EjcwCz5pPqW0KFyjQsu60IgZbZfmH3N0DyPDpNP7AK1DHw7" target="_blank">UBER EATS</a></li>
+                        <li><img src="./images/Doordash--Streamline-Simple-Icons.svg" class="footer_icons" alt="Doordash Icon"><a href="https://www.doordash.com/store/the-golden-monkey-cafe-lynn-23829533/45864348/?srsltid=AfmBOorzp2BiLcZ9FfFqA4dac-sUVmPq-fO-9rF27l1Q2mv0CcukUo_a" target="_blank">DOORDASH</a></li>
+                        <li><img src="./images/Grubhub--Streamline-Simple-Icons.svg" class="footer_icons" alt="Grubhub Icon"><a href="https://www.grubhub.com/restaurant/the-golden-monkey-cafe-468-chestnut-st-lynn/3355119" target="_blank">GRUBHUB</a></li>
+                    </ul>
+                </div>
+            </div>           
+            <div class="footer_section contact_us_footer">
+                <h3>Contact Us</h3>
+                <p>468 Chestnut St, Lynn, MA 01902</p>
+                <p>781-778-3342</p>
+            </div>
+            <div class="footer_bottom_text">
+                <small >CAPSTONE SENIOR PROJECT 2026<br> Tanisha Garner</small>
+            </div>                              
+        </div>
+        
+        
+    </footer> 
+</body>
+</html>
