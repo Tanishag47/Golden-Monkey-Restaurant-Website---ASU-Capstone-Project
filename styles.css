@@ -91,12 +91,12 @@ li > a:hover{
     gap: 5px;
 }
 
-#hamburger span{
+#hamburger > span{
     width: 25px;
     height: 3px;
     background: black;
     display: block;
-    transition: 0.3s;
+    transition: 0.3s; 
 }
 
 
@@ -963,12 +963,12 @@ footer{
     padding-top: 25px;
 }
 
-#gallery_header h1{
+#gallery_header > h1{
     font-family: "Amatic SC", sans-serif;
-    font-size: 40px;
+    font-size: 70px;
 }
 
-#gallery_header p{
+#gallery_header > p{
     font-family:"Montserrat", sans-serif;
     font-size: 20px;
 }
@@ -987,7 +987,7 @@ footer{
     padding: 0 5px;
 }
 
-.photocolumns img{
+.photocolumns > img{
     margin-top: 8px;
     vertical-align: middle;
     width: 100%;
@@ -1002,7 +1002,7 @@ footer{
 
 #formh2{
     font-family: "Amatic SC", sans-serif;
-    font-size: 40px;
+    font-size: 60px;
     text-align: center;
     padding-top: 20px;
 }
@@ -1177,13 +1177,11 @@ input[type=submit]:hover{
     }
 
 /* Hamburger Menu styles */
-    #hamburger{
-        display: flex;
+   #hamburger{
+        display: flex;  
     }
 
-
     #main_nav{
-        display: none;
         display: none;
         flex-direction: column;
         position: absolute;
@@ -1194,11 +1192,10 @@ input[type=submit]:hover{
         display: none;
         flex-direction: column;
         text-align: center;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
 
         position: relative;
         top: 100%;   /* mobile nav below hamburger */
-        left: 0;
+        left: 0;      
     }
 
     #main_nav.active{
@@ -1206,8 +1203,13 @@ input[type=submit]:hover{
     }
 
     #main_nav > ul{
-        flex-direction: column;
+        flex-direction: column;   
     }
+
+    #main_nav > ul > li > a {
+        font-family:"Montserrat", sans-serif;
+        font-size: 23px;
+  }
 
     
     #main_nav.active{
@@ -1229,6 +1231,9 @@ input[type=submit]:hover{
     .menu_button{
         padding: 15px 28px;
         font-size: 14px;
+
+
+        font-weight: bold;
     }
 
 /* About intro styles */
@@ -1248,7 +1253,7 @@ input[type=submit]:hover{
     }
 
     .about_text > p{
-        font-size: 16px;
+        font-size: 20px;
     }
 
     .story_button{
@@ -1257,12 +1262,13 @@ input[type=submit]:hover{
         transition: 0.3s;
         padding: 20px 30px;
         font-size: 14px;
+        font-weight: bold;
     }
 
 /* Favorites styles */
 
   
-    #jqtabs ul{
+    #jqtabs > ul{
         display: flex;
         flex-direction: column;
         gap: 10px;
@@ -1270,19 +1276,21 @@ input[type=submit]:hover{
         margin: 0;
     }
 
-    #jqtabs ul li{
+    #jqtabs > ul > li{
         list-style: none;
         width: 100%;
     }
 
-    #jqtabs ul li a{
+    #jqtabs > ul > li > a{
         display: block;
         width: 100%;
         text-align: center;
         padding: 12px;
+
+        font-weight: bold;
     }
 
-    #jqtabs2 ul{
+    #jqtabs2 > ul{
         display: flex;
         flex-direction: column;
         gap: 10px;
@@ -1290,16 +1298,18 @@ input[type=submit]:hover{
         margin: 0;
     }
 
-    #jqtabs2 ul li{
+    #jqtabs2 > ul > li{
         list-style: none;
         width: 100%;
     }
 
-    #jqtabs2 ul li a{
+    #jqtabs2 > ul > li > a{
         display: block;
         width: 100%;
         text-align: center;
         padding: 12px;
+
+        font-weight: bold;
     }
 
     .gridLayout,
@@ -1322,7 +1332,10 @@ input[type=submit]:hover{
 
    .full_menu_button{
         margin-left: -14.3em;
+    }
 
+    .full_menu_button > li > a{
+        font-weight: bold;
     }
     
 
@@ -1368,6 +1381,11 @@ input[type=submit]:hover{
         margin: 20px auto 0;
     }
 
+    #directions_text_button > a{
+
+        font-weight: bold;
+    }
+
 
 
 /* Stay Connected styles */
@@ -1383,7 +1401,7 @@ input[type=submit]:hover{
         justify-content: center;
     }
 
-    #social_media_links img{
+    #social_media_links > img{
         width: 50px;
         height: 50px;
     }
@@ -1454,7 +1472,7 @@ input[type=submit]:hover{
         
     }
 
-    .menu_tabs li a{
+    .menu_tabs > li > a{
         display: block;
         padding: 8px 14px;
 
@@ -1496,7 +1514,6 @@ input[type=submit]:hover{
     }
 
     #top_about > h1{
-        font-size: 2.5rem;
         letter-spacing: normal;
         margin-top: 0;
         text-align: center;
@@ -1507,19 +1524,24 @@ input[type=submit]:hover{
         margin-top: -150px;
     }
 
+    .top_contents > h1{
+       
+    }
+
     .top_contents > p{
-        font-size: 16px;
+        font-size: 25px;
         padding: 15px;
     }
 
     .top_img > p{
-        font-size: 20px;
+        font-size: 33px;
+        font-weight: bold;
         padding-top: 10px;
     }
 
     /* Hook text */
     .about_hook{
-        font-size: 28px;
+        font-size: 35px;
         padding: 10px;
     }
 
@@ -1542,19 +1564,22 @@ input[type=submit]:hover{
         font-size: 2.2rem;
     }
 
+
     .story{
         font-size: 16px;
         padding: 15px;
     }
 
     .story > p{
-        font-size: 15px;
+        font-size: 20px;
     }
 
     .story_text > p{
-        font-size: 18px;
+        font-size: 25px;
         padding: 15px;
     }
+
+    
 
     /* Images for stories */
     .img_about_top{
@@ -1589,7 +1614,7 @@ input[type=submit]:hover{
     }
 
     #gallery_header > h1{
-        font-size: 28px;
+        font-size: 60px;
     }
 
     #gallery_header > p{
@@ -1616,7 +1641,7 @@ input[type=submit]:hover{
 /* CONTACT PAGE STYLES */
     /* Heading and Thank you text */
     #formh2{
-        font-size: 28px;
+        font-size: 60px;
         padding: 20px 10px 0;
     }
 
