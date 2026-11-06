@@ -42,8 +42,7 @@
 ***
 
 <h3>💻 Website Preview</h3>
-
-
+<img src="" alt="Laptop Mockup of the desktop version" align="left" width="50%">
 
 
 
