@@ -8,7 +8,7 @@
 <p>A responsive restaurant website built to introduce the community to the Golden Monkey cafe in a new way. The main focus was on creating a digital experience that reflects the restaurant's identity, celebrates Cambodian cuisine, and introduces visitors to its story. </p>
 
 <h3> 🇰🇭 Inspiration</h3>
-<p>This project was inspired growing up in my hometown. Living in Lynn MA, I've had the pleasure of being apart of a large Cambodian population. From the food, culture and people, I've been exposed to what makes their culture worth contributing to in the form of web development. This restaurant website encapsulates the flavors of their delicious cuisine, essence and cultural pride</p>
+<p>This project was inspired by growing up in my hometown. Living in Lynn MA, I've had the pleasure of being apart of a large Cambodian population. From the food, culture and people, I've been exposed to what makes their culture worth contributing to in the form of web development. This restaurant website encapsulates the flavors of their delicious cuisine, essence and cultural pride.</p>
 
 ***
 
@@ -38,6 +38,13 @@
 ***
 
 <h3>🖌️Design & Branding</h3>
+
+Three central themes enscapsulate the brands visual identity:
+  - **Tradition:** Cambodian culture and history plays a huge role in the creation of the restaurant and their brand. I wanted to bring a modern, yet culturally relevant style to the brands new website.
+  - **Flavor:** Highlighting the cuisine through imagery and community photos.
+  - **Family:** Showcase the commitment of the restaurant to the surrounding community.
+
+<img src="assets/Identity_Marking_1.png" alt="" width="47%"><img src="assets/Identity_Marking_2.png" alt="" width="47%">
 
 ***
 
