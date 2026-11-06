@@ -42,7 +42,10 @@
 ***
 
 <h3>💻 Website Preview</h3>
-<img src="" alt="Laptop Mockup of the desktop version" align="left" width="50%">
+<img src="assets/Laptop_Check_it_out.png" alt="Laptop Mockup of the desktop version" align="left" width="49%"><img src="assets/Mobile_Flavor.png" alt="" width="49%">
+
+<img src="assets/Triple_Mobile.png" alt="Three different screen views on mobile" align="left" width="49%"><img src="assets/Laptopt_DoubleMobile.png" alt="Laptop screen view with a mobile screen on each side" width="49%">
+
 
 
 
