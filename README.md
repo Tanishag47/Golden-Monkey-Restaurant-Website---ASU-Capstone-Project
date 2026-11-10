@@ -14,14 +14,14 @@
 
 <h3>🚀 Project Features</h3>
 
-  - Interactive Homepage: jQuery-powered image carousel showcasing the restaurant.
-  - Menu: Organized menu presentation highlighting Cambodian cuisine.
-  - Our Story: Content centered around the restaurant's roots, cuisine and community.
-  - Interactive Tabs: Sections highlighting Tradition, Flavor and Family.
-  - Photo Gallery: Visual showcase of the restaurant and its food.
-  - Google Maps Integration: Embedded map displaying the restaurant's location.
-  - Responsive Design: Optimized layouts for desktop and mobile screens.
-  - Order Online: Direct link to the restaurant's Uber Eats ordering page.
+  - **Interactive Homepage:** jQuery-powered image carousel showcasing the restaurant.
+  - **In-site Menu:** Organized menu presentation highlighting Cambodian cuisine.
+  - **Our Story:** Content centered around the restaurant's roots, cuisine, and community.
+  - **Interactive Tabs:** Sections highlighting Tradition, Flavor and Family.
+  - **Photo Gallery:** Visual showcase of the restaurant and its food.
+  - **Google Maps Integration:** Embedded map displaying the restaurant's location.
+  - **Responsive Design:** Optimized layouts for desktop and mobile screens.
+  - **Order Online:** Direct link to the restaurant's Uber Eats ordering page.
 
 ***
 
